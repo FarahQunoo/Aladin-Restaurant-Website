@@ -1,0 +1,233 @@
+
+/*google Fonts*/
+@font-face {
+    font-family:'RobotoSlab';
+    src: url('../font/1/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+  
+}
+
+@font-face {
+    font-family:'YoungSerif';
+  
+    src: url('../font/2/YoungSerif-Regular.ttf') format('truetype');
+}
+/* CSS variables*/
+:root {
+    --warning:#ffc107;
+    --light:#f8f9fa; 
+    --dark: #212529;
+    --primary-font:'RobotoSlab';
+    --headlines-font:'YoungSerif';
+ }
+
+ 
+ *{
+    font-family:var(--primary-font);
+    margin:0;
+    padding: 0;
+}
+
+h1,h3,h4,h5{
+    font-family:var(--headlines-font);
+}
+ .container-xxl{
+    background-color:var(--light);
+ }
+
+ .container-xxl .btn{
+    font-weight: bold;
+ }
+ .container-xxl .btn:hover{
+   background-color: var(--light);
+   border:var(--warning) solid 3px;
+ }
+
+/* --------Navbar-------- */
+
+
+
+.navbar-brand{
+    color:var(--warning);
+    font-weight: bold;
+    font-size: 26px;
+   
+}
+
+.nav-link{
+    font-weight: bold;
+    font-size: 22px;
+   color:var(--dark);
+}
+
+.nav-link:hover{
+    color:var(--warning);
+    text-decoration: underline;
+}
+    
+
+
+.icons a {
+    font-size: 24px; 
+    color: var(--warning);
+}
+
+.icons a:hover{
+    color:var(--dark);
+}
+
+
+/* --------start-------- */
+.hero-header  {
+  background: linear-gradient(to right, rgba(49, 30, 2, 0.863),rgba(0, 0, 0, 0.884)), url(../img/transparent.jpg);
+ 
+ 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.hero-header img {
+    animation: imgRotate 50s linear infinite;
+}
+
+
+
+@keyframes imgRotate { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
+
+.hero-header p{
+line-height: 2;
+} 
+/*--- Über uns ---*/
+
+#uns p{
+    line-height:2;
+    text-align: justify;
+    padding-right: 20px;
+}
+
+#uns img{
+opacity: 70%;
+}
+#uns img:hover{
+    opacity: 100%;
+    }
+
+/*--- Service ---*/
+.service h5{
+    font-weight: bold;
+  
+}
+
+.service-item {
+    box-shadow: 0 0 45px rgba(192, 187, 187, 0.5);
+    transition: 0.5s;
+}
+
+.service-item:hover {
+    background: var(--warning);
+    color: var(--light);
+}
+
+.service-item {
+    transition: 0.5s;
+}
+
+.service-item:hover{
+    color: var(--light);
+}
+
+
+/*--- Team ---*/
+.team h5{
+    font-weight: bold;
+  
+}
+
+.team-item {
+    box-shadow: 0 0 45px rgba(192, 187, 187, 0.5);
+    transition: 0.5s;
+}
+
+.team-item:hover {
+    background: var(--warning);
+    color: var(--light);
+}
+
+.team-item {
+    transition: 0.5s;
+}
+
+.team-item:hover{
+    color: var(--light);
+}
+
+
+/*------menu--------*/
+
+.card img{
+    width:100%;
+    height:100%;
+}
+.card p{
+font-style: italic;
+}
+
+#menu .btn{
+    width:20%; 
+}
+
+
+
+/*------ Footer ----------*/
+
+footer a{
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color:var(--warning);
+}
+
+footer a:hover{
+    color:var(--light);
+    text-decoration: underline;
+}
+
+
+
+/*-- Section Title --*/
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: var(--warning);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    top: 50%;
+    right: -55px;
+    margin-top: -1px;
+    background: var(--warning);
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+    display: none;
+}
